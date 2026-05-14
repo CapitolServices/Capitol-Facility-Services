@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Facility Support Starts Here — Capitol Facility Services</title>
+<meta name="description" content="Tell us the property, the scope, and the timeline. We'll come back with a real plan — not a generic quote." />
+<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&f[]=general-sans@500,600,700&display=swap" />
+<link rel="stylesheet" href="assets/css/styles.css?v=20260513-spacing-balanced" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Capitol Facility Services home">
+      <img class="brand-logo" src="assets/img/logo-animated.gif" alt="Capitol Facility Services logo" />
+      <span class="brand-name"><strong>Capitol Facility Services</strong></span>
+    </a>
+    <nav>
+      <ul class="nav-links" data-nav-links>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="service-areas.html">Service Areas</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="partner.html">Work With Capitol</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch theme" type="button">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="contact.html">Get Started</a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <div class="eyebrow">Contact</div>
+      <h1>Facility Support Starts Here</h1>
+      <p class="lede">Tell us the basics — facility type, scope, timeline, anything else worth knowing. We'll come back with a real plan, not a generic quote.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="contact-split">
+      <aside class="contact-info">
+        <div class="info-tile">
+          <h4>Email</h4>
+          <p><a href="mailto:contact@capitolfacilityservices.com">contact@capitolfacilityservices.com</a></p>
+        </div>
+        <div class="info-tile">
+          <h4>Phone</h4>
+          <p><a href="tel:+15128399521">(512) 839-9521</a></p>
+        </div>
+        <div class="info-tile">
+          <h4>Service area</h4>
+          <p>Austin metro and selected Texas markets — San Antonio, Waco, Houston, Dallas–Fort Worth. Open to other markets for the right facility.</p>
+        </div>
+        <div class="info-tile">
+          <h4>Response</h4>
+          <p>We aim for a same-business-day reply during normal hours, and quick turnaround on urgent project work.</p>
+        </div>
+        <div class="info-tile info-tile--checklist">
+          <h4>Helpful details to include</h4>
+          <ul>
+            <li>Facility type and city</li>
+            <li>Services needed</li>
+            <li>Approximate square footage</li>
+            <li>Preferred walkthrough timing</li>
+            <li>Any urgent deadlines or current issues</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- CONTACT FORM -->
+      <form id="contactForm" class="form-card" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="c_name">Your name</label>
+            <input id="c_name" name="name" type="text" required />
+          </div>
+          <div class="form-field">
+            <label for="c_company">Company</label>
+            <input id="c_company" name="company" type="text" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="c_email">Email</label>
+            <input id="c_email" name="email" type="email" required />
+          </div>
+          <div class="form-field">
+            <label for="c_phone">Phone (optional)</label>
+            <input id="c_phone" name="phone" type="tel" placeholder="(___) ___-____" />
+          </div>
+        </div>
+
+        <div class="form-field full" style="margin-bottom: var(--sp-4);">
+          <label>Preferred contact method</label>
+          <div class="radio-row">
+            <label><input type="radio" name="contact_method" value="Email" checked /> Email</label>
+            <label><input type="radio" name="contact_method" value="Phone" /> Phone</label>
+            <label><input type="radio" name="contact_method" value="Either" /> Either</label>
+          </div>
+        </div>
+
+        <div class="form-field full" style="margin-bottom: var(--sp-4);">
+          <label for="c_address">Facility address / location</label>
+          <input id="c_address" name="facility_address" type="text" placeholder="Street address, city, or nearest cross streets" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="c_facility">Facility type</label>
+            <select id="c_facility" name="facility_type" required>
+              <option value="">Select facility type…</option>
+              <option>Education facility</option>
+              <option>Warehouse / production / manufacturing / industrial facility</option>
+              <option>Medical facility</option>
+              <option>Office building</option>
+              <option>Commercial multi-tenant building</option>
+              <option>Showroom</option>
+              <option>Construction / project site</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="c_sqft">Square footage / building size (optional)</label>
+            <input id="c_sqft" name="square_footage" type="text" placeholder="e.g. 25,000 sq ft / 4 floors" />
+          </div>
+        </div>
+
+        <div class="form-field full" style="margin-bottom: var(--sp-4);">
+          <label>Services needed</label>
+          <div class="checkbox-grid">
+            <label class="check"><input type="checkbox" name="services" value="Day porter"/> <span>Day porter</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Office cleaning"/> <span>Office cleaning</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Post-construction cleaning"/> <span>Post-construction cleaning</span></label>
+            <label class="check"><input type="checkbox" name="services" value="VCT flooring strip and wax"/> <span>VCT flooring strip &amp; wax</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Concrete staining"/> <span>Concrete staining</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Interior painting"/> <span>Interior painting</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Pressure washing"/> <span>Pressure washing</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Carpet cleaning"/> <span>Carpet cleaning</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Epoxy floor coatings"/> <span>Epoxy floor coatings</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Tile and grout cleaning"/> <span>Tile &amp; grout cleaning</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Janitorial supply servicing"/> <span>Janitorial supply servicing</span></label>
+            <label class="check"><input type="checkbox" name="services" value="Other"/> <span>Other</span></label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="c_service_date">Preferred walkthrough date</label>
+            <input id="c_service_date" name="preferred_date" type="date" />
+          </div>
+          <div class="form-field">
+            <label for="c_service_time">Preferred walkthrough time</label>
+            <input id="c_service_time" name="preferred_time" type="time" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="c_market">Market</label>
+            <select id="c_market" name="market">
+              <option value="">Select market…</option>
+              <option>Austin metro</option>
+              <option>San Antonio</option>
+              <option>Waco</option>
+              <option>Houston</option>
+              <option>Dallas–Fort Worth</option>
+              <option>Other Texas market</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field full">
+          <label for="c_details">Details</label>
+          <textarea id="c_details" name="details" placeholder="Anything else worth knowing — scope, current vendor situation, walk-throughs, preferred schedule."></textarea>
+        </div>
+
+        <div style="display:flex; gap: var(--sp-3); margin-top: var(--sp-5); align-items:center; flex-wrap:wrap;">
+          <button type="submit" class="btn btn--primary">Send message</button>
+          <span style="font-size: var(--fs-xs); color: var(--text-faint);">Sends via your email client to contact@capitolfacilityservices.com</span>
+        </div>
+
+        <div id="contactStatus" class="form-status" role="status"></div>
+
+        <div class="form-note">If your email client doesn't open, email us directly at <a href="mailto:contact@capitolfacilityservices.com">contact@capitolfacilityservices.com</a> with the details above.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT NEXT STEPS -->
+  <section class="section container">
+    <div class="next-steps next-steps--compact">
+      <div>
+        <div class="eyebrow">After you reach out</div>
+        <h2>Expect a practical service conversation.</h2>
+        <p>The first goal is simple: understand the building, the timing, and the scope well enough to recommend a clear next step.</p>
+      </div>
+      <div class="step-list">
+        <article>
+          <b>1</b>
+          <h3>Confirm fit</h3>
+          <p>Market, facility type, timeline, and service need.</p>
+        </article>
+        <article>
+          <b>2</b>
+          <h3>Review scope</h3>
+          <p>Walkthrough, photos, or project details depending on the request.</p>
+        </article>
+        <article>
+          <b>3</b>
+          <h3>Plan next step</h3>
+          <p>Service plan, project timing, or vendor approval path.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h5>Services</h5>
+        <a href="services.html#janitorial">Janitorial</a>
+        <a href="services.html#floor-care">Floor Care</a>
+        <a href="services.html#project">Project Cleaning</a>
+        <a href="services.html#painting">Painting</a>
+        <a href="services.html#supplies">Facility Supplies</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="service-areas.html">Service Areas</a>
+        <a href="partner.html">Work With Capitol</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-terms.html">Privacy &amp; Terms</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:contact@capitolfacilityservices.com">contact@capitolfacilityservices.com</a>
+        <a href="tel:+15128399521">(512) 839-9521</a>
+        <p style="color:var(--text-muted); font-size:14px; margin:8px 0 0;">Austin, Texas</p>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <span>© <span data-year></span> Capitol Facility Services. All rights reserved.</span>
+      <span><a href="privacy-terms.html">Privacy &amp; Terms</a> · Built in Austin · Ready for Texas facilities.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-leadbar" aria-label="Quick contact options">
+  <a href="mailto:contact@capitolfacilityservices.com">Email Capitol</a>
+  <a href="contact.html">Request Walkthrough</a>
+</div>
+
+<script src="assets/js/site.js"></script>
+<script>
+  composeMailto('contactForm', 'contact@capitolfacilityservices.com', 'Capitol Facility Services Inquiry', 'contactStatus');
+</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="transform:translate(-${scrollX}px,-${scrollY}px);transform-origin:top left">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
