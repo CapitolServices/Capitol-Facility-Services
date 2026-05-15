@@ -83,9 +83,7 @@
       </aside>
 
       <!-- CONTACT FORM -->
-      <form id="contactForm" class="form-card" action="https://formsubmit.co/contact@capitolfacilityservices.com" method="POST">
-        <input type="hidden" name="_subject" value="Facility Service Inquiry - Capitol Facility Services" />
-        <input type="hidden" name="_next" value="https://capitolfacilityservices.com/thanks.html" />
+      <form id="contactForm" class="form-card">
         <input type="hidden" name="form_type" value="Facility Service Inquiry" />
         <input type="hidden" name="source_company" value="Capitol Facility Services" />
         <input type="hidden" name="source_website" value="capitolfacilityservices.com" />
@@ -201,7 +199,27 @@
         </div>
 
         <div class="form-note">After submitting, your inquiry is sent to <a href="mailto:contact@capitolfacilityservices.com">contact@capitolfacilityservices.com</a> with the subject “Facility Service Inquiry - Capitol Facility Services.” Please do not submit Social Security numbers, government IDs, financial information, medical information, or other sensitive personal information through this form.</div>
-      </form>
+      <script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const data = {
+    name: document.getElementById('c_name').value,
+    company: document.getElementById('c_company').value,
+    email: document.getElementById('c_email').value,
+    phone: document.querySelector('[name="phone"]') ? document.querySelector('[name="phone"]').value : '',
+    form_type: 'Facility Service Inquiry',
+    source_company: 'Capitol Facility Services',
+    source_website: 'capitolfacilityservices.com'
+  };
+ fetch('https://hook.us2.make.com/2bz0p4jxv48x6mkrckvt0svh8vx2ftkv', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(() => {
+    window.location.href = 'https://capitolfacilityservices.com/thanks.html';
+  });
+});
+</script></form>
     </div>
   </section>
 
