@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&f[]=general-sans@500,600,700&display=swap" />
-<link rel="stylesheet" href="assets/css/styles.css?v=20260514-mobile-browser-fix" />
+<link rel="stylesheet" href="assets/css/styles.css?v=20260515-careers-email" />
 </head>
 <body>
 
@@ -25,6 +25,7 @@
         <li><a href="service-areas.html">Service Areas</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="partner.html">Work With Capitol</a></li>
+        <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -116,7 +117,12 @@
       <p style="max-width: 50ch;">A short form — enough to give us context so the first conversation is useful for both sides.</p>
     </div>
 
-    <form id="partnerForm" class="form-card" novalidate>
+    <form id="partnerForm" class="form-card" action="https://formsubmit.co/contact@capitolfacilityservices.com" method="POST">
+      <input type="hidden" name="_subject" value="Work With Capitol Form - Capitol Facility Services" />
+      <input type="hidden" name="_next" value="https://capitolfacilityservices.com/thanks.html" />
+      <input type="hidden" name="form_type" value="Work With Capitol Form" />
+      <input type="hidden" name="source_company" value="Capitol Facility Services" />
+      <input type="hidden" name="source_website" value="capitolfacilityservices.com" />
       <div class="form-row">
         <div class="form-field">
           <label for="p_company">Company</label>
@@ -220,12 +226,10 @@
 
       <div style="display:flex; gap: var(--sp-3); margin-top: var(--sp-5); align-items:center; flex-wrap:wrap;">
         <button type="submit" class="btn btn--primary">Send partner inquiry</button>
-        <span style="font-size: var(--fs-xs); color: var(--text-faint);">Submits via your email client to contact@capitolfacilityservices.com</span>
+        <span style="font-size: var(--fs-xs); color: var(--text-faint);">Sends to contact@capitolfacilityservices.com</span>
       </div>
 
-      <div id="partnerStatus" class="form-status" role="status"></div>
-
-      <div class="form-note">If your email client doesn't open, email us directly at <a href="mailto:contact@capitolfacilityservices.com">contact@capitolfacilityservices.com</a> with the details above.</div>
+      <div class="form-note">After submitting, your inquiry is sent to <a href="mailto:contact@capitolfacilityservices.com">contact@capitolfacilityservices.com</a> with the subject “Work With Capitol Form - Capitol Facility Services.”</div>
     </form>
   </section>
 </main>
@@ -246,6 +250,7 @@
         <a href="about.html">About</a>
         <a href="service-areas.html">Service Areas</a>
         <a href="partner.html">Work With Capitol</a>
+        <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
         <a href="privacy-terms.html">Privacy &amp; Terms</a>
       </div>
@@ -269,9 +274,6 @@
 </div>
 
 <script src="assets/js/site.js"></script>
-<script>
-  composeMailto('partnerForm', 'contact@capitolfacilityservices.com', 'Work With Capitol Inquiry', 'partnerStatus');
-</script>
 <script data-pplx-inline-edit>
 (function () {
   if (window === window.top) return;
