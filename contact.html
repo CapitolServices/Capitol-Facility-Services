@@ -199,19 +199,20 @@
         </div>
 
         <div class="form-note">After submitting, your inquiry is sent to <a href="mailto:contact@capitolfacilityservices.com">contact@capitolfacilityservices.com</a> with the subject “Facility Service Inquiry - Capitol Facility Services.” Please do not submit Social Security numbers, government IDs, financial information, medical information, or other sensitive personal information through this form.</div>
-      <script>
+<script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const data = {
-    name: document.getElementById('c_name').value,
-    company: document.getElementById('c_company').value,
-    email: document.getElementById('c_email').value,
-    phone: document.querySelector('[name="phone"]') ? document.querySelector('[name="phone"]').value : '',
-    form_type: 'Facility Service Inquiry',
-    source_company: 'Capitol Facility Services',
-    source_website: 'capitolfacilityservices.com'
-  };
- fetch('https://hook.us2.make.com/2bz0p4jxv48x6mkrckvt0svh8vx2ftkv', {
+
+  const formData = new FormData(this);
+
+  // Add extra fixed info (optional but useful)
+  formData.append('form_type', 'Facility Service Inquiry');
+  formData.append('source_company', 'Capitol Facility Services');
+  formData.append('source_website', 'capitolfacilityservices.com');
+
+  const data = Object.fromEntries(formData.entries());
+
+  fetch('https://hook.us2.make.com/2bz0p4jxv48x6mkrckvt0svh8vx2ftkv', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
