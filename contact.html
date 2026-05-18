@@ -210,7 +210,14 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   formData.append('source_company', 'Capitol Facility Services');
   formData.append('source_website', 'capitolfacilityservices.com');
 
-  const data = Object.fromEntries(formData.entries());
+  const data = {};
+formData.forEach(function(value, key) {
+  if (data[key]) {
+    data[key] = data[key] + ', ' + value;
+  } else {
+    data[key] = value;
+  }
+});
 
   fetch('https://hook.us2.make.com/2bz0p4jxv48x6mkrckvt0svh8vx2ftkv', {
     method: 'POST',
