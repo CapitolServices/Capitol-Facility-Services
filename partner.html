@@ -117,7 +117,7 @@
       <p style="max-width: 50ch;">A short form — enough to give us context so the first conversation is useful for both sides.</p>
     </div>
 
-    <form id="partnerForm" class="form-card" action="https://formsubmit.co/contact@capitolfacilityservices.com" method="POST">
+    <form id="partnerForm" class="form-card">
       <input type="hidden" name="_subject" value="Work With Capitol Form - Capitol Facility Services" />
       <input type="hidden" name="_next" value="https://capitolfacilityservices.com/thanks.html" />
       <input type="hidden" name="form_type" value="Work With Capitol Form" />
@@ -274,6 +274,28 @@
 </div>
 
 <script src="assets/js/site.js"></script>
+
+<script>
+document.getElementById('partnerForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const data = {};
+  new FormData(this).forEach(function(value, key) {
+    if (data[key]) {
+      data[key] = data[key] + ', ' + value;
+    } else {
+      data[key] = value;
+    }
+  });
+  fetch('https://hook.us2.make.com/6p747wrv49nhfjepsatwlk7ugac8ontj', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(() => {
+    window.location.href = 'https://capitolfacilityservices.com/thanks.html';
+  });
+});
+</script>
+
 <script data-pplx-inline-edit>
 (function () {
   if (window === window.top) return;
