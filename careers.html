@@ -109,7 +109,7 @@
         </div>
       </aside>
 
-      <form id="careerForm" class="form-card" action="https://formsubmit.co/contact@capitolfacilityservices.com" method="POST">
+      <form id="careerForm" class="form-card">
         <input type="hidden" name="_subject" value="Career Application - Capitol Facility Services" />
         <input type="hidden" name="_next" value="https://capitolfacilityservices.com/thanks.html" />
         <input type="hidden" name="form_type" value="Career Application" />
@@ -244,7 +244,7 @@
         </div>
       </aside>
 
-      <form id="careerSpanishForm" class="form-card" action="https://formsubmit.co/contact@capitolfacilityservices.com" method="POST" lang="es">
+      <form id="careerSpanishForm" class="form-card" lang="es">
         <input type="hidden" name="_subject" value="Solicitud de Empleo en Español - Capitol Facility Services" />
         <input type="hidden" name="_next" value="https://capitolfacilityservices.com/thanks.html" />
         <input type="hidden" name="form_type" value="Solicitud de Empleo en Español" />
@@ -397,5 +397,52 @@
 </div>
 
 <script src="assets/js/site.js"></script>
+
+<script>
+function attachCareerFormHandler(formId, languageValue) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const fd = new FormData(this);
+    const data = {};
+
+    fd.forEach(function (value, key) {
+      if (data[key]) {
+        data[key] = data[key] + ', ' + value;
+      } else {
+        data[key] = value;
+      }
+    });
+
+    // Normalize Spanish keys into the English ones so Make sees one set
+    if (data.nombre_completo && !data.full_name) data.full_name = data.nombre_completo;
+    if (data.telefono && !data.phone) data.phone = data.telefono;
+    if (data.area_preferida && !data.preferred_market) data.preferred_market = data.area_preferida;
+    if (data.tipo_de_trabajo && !data.job_category) data.job_category = data.tipo_de_trabajo;
+    if (data.disponibilidad && !data.availability) data.availability = data.disponibilidad;
+    if (data.fecha_para_empezar && !data.earliest_start_date) data.earliest_start_date = data.fecha_para_empezar;
+    if (data.anos_de_experiencia && !data.years_experience) data.years_experience = data.anos_de_experiencia;
+    if (data.areas_de_experiencia && !data.experience_areas) data.experience_areas = data.areas_de_experiencia;
+    if (data.notas_de_experiencia && !data.experience_notes) data.experience_notes = data.notas_de_experiencia;
+
+    if (languageValue) data.language = languageValue;
+
+    fetch('https://hook.us2.make.com/22wd6no2nsnq4ocxqoj577o7ixjhbu6o', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function () {
+      window.location.href = 'https://capitolfacilityservices.com/thanks.html';
+    });
+  });
+}
+
+attachCareerFormHandler('careerForm', 'English');
+attachCareerFormHandler('careerSpanishForm', 'Spanish');
+</script>
+
 </body>
 </html>
